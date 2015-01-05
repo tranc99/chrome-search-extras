@@ -15,13 +15,18 @@
         "https://*/*"
       ],
       "css": [
-        "styles/main.css"
+        "bower_components/angular/angular-csp.css"
       ],
       "js": [
-        "scripts/contentscript.js"
+        "bower_components/angular/angular.min.js",
+        "scripts/contentscripts.js"
       ],
       "run_at": "document_end",
       "all_frames": false
     }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": [
+    "bower_components/angular/*"
   ]
 }
