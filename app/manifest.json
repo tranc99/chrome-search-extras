@@ -19,14 +19,16 @@
       ],
       "js": [
         "bower_components/angular/angular.min.js",
-        "scripts/contentscripts.js"
+        "scripts/contentscript.js"
       ],
+      "html": [ "templates/bing.html" ],
       "run_at": "document_end",
       "all_frames": false
     }
   ],
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "web_accessible_resources": [
+    "templates/bing.html",
     "bower_components/angular/*"
   ]
 }
