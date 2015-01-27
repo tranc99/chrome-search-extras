@@ -10,6 +10,7 @@ window.addEventListener("load", function() {
   app.controller("MainController", function($scope) {});
   myDirective = document.createElement("div");
   myDirective.setAttribute("my-directive", "");
+  myDirective.setAttribute("id", "myDiv");    
   viewport.appendChild(myDirective);
   project_tabs = '<span class="Ykrj7b">&nbsp<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">EMAIL</span></button> <button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">TASKS</span></button> <button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">FILES</span></button> <button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">CALENDAR</span></button> <button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">PROJECT INFO</span></button> </span>';
   template1 = "<div>Search with Bing</div>";
@@ -20,5 +21,7 @@ window.addEventListener("load", function() {
       template: project_tabs
     };
   });
-  return angular.bootstrap(html, ['Binged'], []);
+    angular.bootstrap(html, ['Binged'], []);
+    document.getElementById("myDiv").style.backgroundColor="red";    
+
 });
