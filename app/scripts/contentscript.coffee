@@ -6,31 +6,34 @@ window.addEventListener "load", ->
 	html.setAttribute "ng-app", ""
 	html.setAttribute "ng-csp", ""
 
-	viewport = document.getElementById "viewport"
+	#viewport = document.getElementById "viewport"
+	viewport = document.getElementsByClassName("Ykrj7b")[0]
 	viewport.setAttribute "ng-controller", "MainController"
 
 	# add a dummy controller
 	app.controller "MainController", ($scope)->
 
-	autoCompleteWin = document.querySelector(".sbdd_b")
-	angular.element(autoCompleteWin).remove()	
-		
-	input = document.getElementById "lst-ib"
-	input.setAttribute "ng-model", "search"
-
 	#add a very basic directive
 	myDirective = document.createElement "div"                             
 	myDirective.setAttribute "my-directive", ""
-	document.querySelector(".jsb center").appendChild myDirective
+	viewport.appendChild myDirective
 
-	app.directive "myDirective", [ '$sce', ($sce)->
-			return {
-				restrict: 'EA',
-				replace: true,
-				#template: '"<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">Search on Bing</span></button>"'
-				templateUrl: $sce.trustAsResourceUrl chrome.extension.getURL "templates/bing.html"
-			}
-		]
+	project_tabs = '<span class="Ykrj7b">&nbsp<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">EMAIL</span></button>
+<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">TASKS</span></button>
+<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">FILES</span></button>
+<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">CALENDAR</span></button>
+<button class="gbqfba" aria-label="Google Search" id="gbqfba" name="btnK"><span id="gbqfsa">PROJECT INFO</span></button>
+</span>'
+
+	template1 = "<div>Search with Bing</div>"
+
+	app.directive "myDirective", ->
+		return {
+			restrict: 'EA',
+			replace: true,
+			#template: "<div>Search with Bing</div>"
+			template: project_tabs
+		}
 
 
 	angular.bootstrap html, ['Binged'], []
