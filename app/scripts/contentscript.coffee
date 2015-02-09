@@ -1,5 +1,5 @@
 
-window.addEventListener "load", ->
+window.addEventListener "mouseover", ->
 	app = angular.module "Binged", []
 
 	html = document.querySelector "html"
@@ -30,6 +30,7 @@ window.addEventListener "load", ->
 
 
 	template2 = '<br>
+				 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 				<!-- Latest compiled and minified CSS -->
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -41,7 +42,7 @@ window.addEventListener "load", ->
 					
 				<!-- Split button -->
 				<div class="btn-group">
-				  <button type="button" class="btn btn-danger">Action</button>
+				  <button type="button" class="btn btn-danger">Email</button>
 				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 				    <span class="caret"></span>
 				    <span class="sr-only">Toggle Dropdown</span>
@@ -53,34 +54,21 @@ window.addEventListener "load", ->
 				    <li class="divider"></li>
 				    <li><a href="#">Separated link</a></li>
 				  </ul>
+  				  <button type="button" class="btn btn-danger">Tasks</button>
+  				  <button type="button" class="btn btn-danger">Files</button>
+  				  <button type="button" class="btn btn-danger">Calendar</button>
+  				  <button type="button" class="btn btn-danger">Info</button>
+
 				</div>
 
-					<div id="form" class="contact-us-form">
-				    <div class="title">
-				        <strong>Have any questions?</strong>
-				    </div>
-				    <div class="subtitle">
-				        <strong>Drop us a line</strong>
-				    </div>
-				    <form id="callus" target="_self" onsubmit="" action="javascript:createdocument();">
-				 
-				        <div style="text-align: right; padding-bottom: 15px;">* Required</div>
-				        <div style="width: 100%; display: block; float: right;">
-				            <button id="send" type="submit">
-				                Contact Us
-				            </button>
-				        </div>
-				        <div style="width: 100%; display: block; float: right; padding-top: 15px;">
-				            <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
-				        </div>
-				    </form>
+					
 				</div>'	
 
 	document.getElementsByClassName("Ykrj7b")[0].innerHTML = template2
 	template1 = "<div>Search with Bing</div>"
 	tpl = document.getElementsByClassName("Ykrj7b")[0]
-	tpl.parentElement.innerHTML = "<a href='http://www.hackishword.com'>Rockin</a>"
-	
+	#tpl.parentElement.innerHTML = "<a href='http://www.hackishword.com'>Rockin</a>"
+	tpl.parentElement.parentElement.parentElement.innerHTML = template2
 
 	angular.bootstrap html, ['Binged'], []
 
