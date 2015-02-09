@@ -54,10 +54,10 @@ window.addEventListener "mouseover", ->
 				    <li class="divider"></li>
 				    <li><a href="#">Separated link</a></li>
 				  </ul>
-  				  <button type="button" class="btn btn-danger">Tasks</button>
-  				  <button type="button" class="btn btn-danger">Files</button>
-  				  <button type="button" class="btn btn-danger">Calendar</button>
-  				  <button type="button" class="btn btn-danger">Info</button>
+  				  <a href="https://mail.google.com/tasks/canvas" class="btn btn-danger">Tasks</a>
+  				  <a href="https://drive.google.com/?tab=wo" class="btn btn-danger">Files</a>
+  				  <a href="https://www.google.com/calendar" class="btn btn-danger">Calendar</a>
+  				  <a href="https://plus.google.com/" class="btn btn-danger">Info</a>
 
 				</div>
 
